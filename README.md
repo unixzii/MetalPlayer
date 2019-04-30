@@ -1,4 +1,4 @@
-# MetalPlay
+# MetalPlayer
 
 > This is a WIP project.
 
@@ -25,8 +25,8 @@ self.player = AVPlayer(url: URL(string: "<#Your video URL here#>")!)
 
 ## TODOs
 
-- [ ] Playback control
-- [ ] Run time shaders selection
+- [ ] Playback control.
+- [ ] Run time shaders selection.
 - [ ] ...
 
 ## License
