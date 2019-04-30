@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA7977602275B9EC00686CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79775F2275B9EC00686CA3 /* AppDelegate.swift */; };
+		FA7977622275B9ED00686CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7977612275B9ED00686CA3 /* Assets.xcassets */; };
+		FA7977652275B9ED00686CA3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7977632275B9ED00686CA3 /* MainMenu.xib */; };
+		FA7977732275BAF100686CA3 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7977722275BAF100686CA3 /* PlayerViewController.swift */; };
+		FA7977782275BBA000686CA3 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7977762275BBA000686CA3 /* MetalKit.framework */; };
+		FA7977792275BBA000686CA3 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7977772275BBA000686CA3 /* Metal.framework */; };
+		FA79777B2275BBB900686CA3 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79777A2275BBB900686CA3 /* VideoPlayerView.swift */; };
+		FA79777E2275BBFF00686CA3 /* RenderProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79777D2275BBFF00686CA3 /* RenderProtocols.swift */; };
+		FA7977812275D20300686CA3 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7977802275D20300686CA3 /* Logger.swift */; };
+		FA7977842275D52F00686CA3 /* SimpleRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7977832275D52F00686CA3 /* SimpleRenderer.swift */; };
+		FA7977872275DCC500686CA3 /* DefaultShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FA7977862275DCC500686CA3 /* DefaultShaders.metal */; };
+		FA79778B2275F9E700686CA3 /* AVPlayerTextureSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79778A2275F9E700686CA3 /* AVPlayerTextureSource.swift */; };
+		FA79778D2276007600686CA3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA79778C2276007600686CA3 /* AVFoundation.framework */; };
+		FAA2E5A42277431C0013F858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2E5A62277431C0013F858 /* Main.storyboard */; };
+		FAA2E5A922774A2D0013F858 /* InvertColorRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5A822774A2D0013F858 /* InvertColorRenderPass.swift */; };
+		FAA2E5AB22774E520013F858 /* InvertColorShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5AA22774E520013F858 /* InvertColorShaders.metal */; };
+		FAA2E5AD227757620013F858 /* GaussianBlurRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5AC227757620013F858 /* GaussianBlurRenderPass.swift */; };
+		FAA2E5AF2277576E0013F858 /* GaussianBlurShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5AE2277576E0013F858 /* GaussianBlurShaders.metal */; };
+		FAA2E5B32278219A0013F858 /* DisplayRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5B22278219A0013F858 /* DisplayRenderPass.swift */; };
+		FAA2E5B5227834790013F858 /* BasicRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5B4227834790013F858 /* BasicRenderPass.swift */; };
+		FAA2E5B7227838000013F858 /* DreamEffectRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5B6227838000013F858 /* DreamEffectRenderPass.swift */; };
+		FAA2E5B9227838260013F858 /* DreamEffectShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5B8227838260013F858 /* DreamEffectShaders.metal */; };
+		FAA2E5BB2278544E0013F858 /* GlitchEffectRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5BA2278544E0013F858 /* GlitchEffectRenderPass.swift */; };
+		FAA2E5BE227854AE0013F858 /* GlitchEffectShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FAA2E5BD227854AE0013F858 /* GlitchEffectShaders.metal */; };
+		FAA2E5C022786CD40013F858 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA2E5BF22786CD40013F858 /* README.md */; };
+		FAAC712D22772D0800CE372F /* PlayerWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC712C22772D0800CE372F /* PlayerWindowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA79775C2275B9EC00686CA3 /* MetalPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA79775F2275B9EC00686CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA7977612275B9ED00686CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA7977642275B9ED00686CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FA7977662275B9ED00686CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7977672275B9ED00686CA3 /* MetalPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalPlayer.entitlements; sourceTree = "<group>"; };
+		FA7977722275BAF100686CA3 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		FA7977762275BBA000686CA3 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		FA7977772275BBA000686CA3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		FA79777A2275BBB900686CA3 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		FA79777D2275BBFF00686CA3 /* RenderProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderProtocols.swift; sourceTree = "<group>"; };
+		FA7977802275D20300686CA3 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		FA7977832275D52F00686CA3 /* SimpleRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRenderer.swift; sourceTree = "<group>"; };
+		FA7977862275DCC500686CA3 /* DefaultShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DefaultShaders.metal; sourceTree = "<group>"; };
+		FA79778A2275F9E700686CA3 /* AVPlayerTextureSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerTextureSource.swift; sourceTree = "<group>"; };
+		FA79778C2276007600686CA3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FAA2E5A52277431C0013F858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAA2E5A822774A2D0013F858 /* InvertColorRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertColorRenderPass.swift; sourceTree = "<group>"; };
+		FAA2E5AA22774E520013F858 /* InvertColorShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = InvertColorShaders.metal; sourceTree = "<group>"; };
+		FAA2E5AC227757620013F858 /* GaussianBlurRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianBlurRenderPass.swift; sourceTree = "<group>"; };
+		FAA2E5AE2277576E0013F858 /* GaussianBlurShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GaussianBlurShaders.metal; sourceTree = "<group>"; };
+		FAA2E5B22278219A0013F858 /* DisplayRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRenderPass.swift; sourceTree = "<group>"; };
+		FAA2E5B4227834790013F858 /* BasicRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRenderPass.swift; sourceTree = "<group>"; };
+		FAA2E5B6227838000013F858 /* DreamEffectRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamEffectRenderPass.swift; sourceTree = "<group>"; };
+		FAA2E5B8227838260013F858 /* DreamEffectShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DreamEffectShaders.metal; sourceTree = "<group>"; };
+		FAA2E5BA2278544E0013F858 /* GlitchEffectRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchEffectRenderPass.swift; sourceTree = "<group>"; };
+		FAA2E5BC2278546C0013F858 /* ShaderCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderCommon.h; sourceTree = "<group>"; };
+		FAA2E5BD227854AE0013F858 /* GlitchEffectShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GlitchEffectShaders.metal; sourceTree = "<group>"; };
+		FAA2E5BF22786CD40013F858 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAAC712C22772D0800CE372F /* PlayerWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWindowController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA7977592275B9EC00686CA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA79778D2276007600686CA3 /* AVFoundation.framework in Frameworks */,
+				FA7977782275BBA000686CA3 /* MetalKit.framework in Frameworks */,
+				FA7977792275BBA000686CA3 /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA7977532275B9EC00686CA3 = {
+			isa = PBXGroup;
+			children = (
+				FAA2E5BF22786CD40013F858 /* README.md */,
+				FA79775E2275B9EC00686CA3 /* MetalPlayer */,
+				FA79775D2275B9EC00686CA3 /* Products */,
+				FA7977752275BBA000686CA3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA79775D2275B9EC00686CA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA79775C2275B9EC00686CA3 /* MetalPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA79775E2275B9EC00686CA3 /* MetalPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				FA79777C2275BBDD00686CA3 /* Core */,
+				FA7977742275BB8500686CA3 /* Views */,
+				FA7977712275BADE00686CA3 /* Controllers */,
+				FA79777F2275D1D600686CA3 /* Utilities */,
+				FA79775F2275B9EC00686CA3 /* AppDelegate.swift */,
+				FA7977612275B9ED00686CA3 /* Assets.xcassets */,
+				FA7977632275B9ED00686CA3 /* MainMenu.xib */,
+				FAA2E5A62277431C0013F858 /* Main.storyboard */,
+				FA7977662275B9ED00686CA3 /* Info.plist */,
+				FA7977672275B9ED00686CA3 /* MetalPlayer.entitlements */,
+			);
+			path = MetalPlayer;
+			sourceTree = "<group>";
+		};
+		FA7977712275BADE00686CA3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC712C22772D0800CE372F /* PlayerWindowController.swift */,
+				FA7977722275BAF100686CA3 /* PlayerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA7977742275BB8500686CA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA79777A2275BBB900686CA3 /* VideoPlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA7977752275BBA000686CA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA79778C2276007600686CA3 /* AVFoundation.framework */,
+				FA7977772275BBA000686CA3 /* Metal.framework */,
+				FA7977762275BBA000686CA3 /* MetalKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA79777C2275BBDD00686CA3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2E5A7227749FD0013F858 /* RenderPasses */,
+				FA7977892275F9D200686CA3 /* TextureSources */,
+				FA79777D2275BBFF00686CA3 /* RenderProtocols.swift */,
+				FA7977832275D52F00686CA3 /* SimpleRenderer.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FA79777F2275D1D600686CA3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FA7977802275D20300686CA3 /* Logger.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FA7977892275F9D200686CA3 /* TextureSources */ = {
+			isa = PBXGroup;
+			children = (
+				FA79778A2275F9E700686CA3 /* AVPlayerTextureSource.swift */,
+			);
+			path = TextureSources;
+			sourceTree = "<group>";
+		};
+		FAA2E5A7227749FD0013F858 /* RenderPasses */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2E5BC2278546C0013F858 /* ShaderCommon.h */,
+				FA7977862275DCC500686CA3 /* DefaultShaders.metal */,
+				FAA2E5B4227834790013F858 /* BasicRenderPass.swift */,
+				FAA2E5B22278219A0013F858 /* DisplayRenderPass.swift */,
+				FAA2E5A822774A2D0013F858 /* InvertColorRenderPass.swift */,
+				FAA2E5AA22774E520013F858 /* InvertColorShaders.metal */,
+				FAA2E5AC227757620013F858 /* GaussianBlurRenderPass.swift */,
+				FAA2E5AE2277576E0013F858 /* GaussianBlurShaders.metal */,
+				FAA2E5B6227838000013F858 /* DreamEffectRenderPass.swift */,
+				FAA2E5B8227838260013F858 /* DreamEffectShaders.metal */,
+				FAA2E5BA2278544E0013F858 /* GlitchEffectRenderPass.swift */,
+				FAA2E5BD227854AE0013F858 /* GlitchEffectShaders.metal */,
+			);
+			path = RenderPasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA79775B2275B9EC00686CA3 /* MetalPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA79776A2275B9ED00686CA3 /* Build configuration list for PBXNativeTarget "MetalPlayer" */;
+			buildPhases = (
+				FA7977582275B9EC00686CA3 /* Sources */,
+				FA7977592275B9EC00686CA3 /* Frameworks */,
+				FA79775A2275B9EC00686CA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalPlayer;
+			productName = MetalPlayer;
+			productReference = FA79775C2275B9EC00686CA3 /* MetalPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA7977542275B9EC00686CA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Cyandev;
+				TargetAttributes = {
+					FA79775B2275B9EC00686CA3 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = FA7977572275B9EC00686CA3 /* Build configuration list for PBXProject "MetalPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA7977532275B9EC00686CA3;
+			productRefGroup = FA79775D2275B9EC00686CA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA79775B2275B9EC00686CA3 /* MetalPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA79775A2275B9EC00686CA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2E5A42277431C0013F858 /* Main.storyboard in Resources */,
+				FA7977622275B9ED00686CA3 /* Assets.xcassets in Resources */,
+				FAA2E5C022786CD40013F858 /* README.md in Resources */,
+				FA7977652275B9ED00686CA3 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA7977582275B9EC00686CA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2E5BB2278544E0013F858 /* GlitchEffectRenderPass.swift in Sources */,
+				FA7977812275D20300686CA3 /* Logger.swift in Sources */,
+				FA7977872275DCC500686CA3 /* DefaultShaders.metal in Sources */,
+				FAA2E5B5227834790013F858 /* BasicRenderPass.swift in Sources */,
+				FAA2E5B7227838000013F858 /* DreamEffectRenderPass.swift in Sources */,
+				FA79777E2275BBFF00686CA3 /* RenderProtocols.swift in Sources */,
+				FAAC712D22772D0800CE372F /* PlayerWindowController.swift in Sources */,
+				FA7977732275BAF100686CA3 /* PlayerViewController.swift in Sources */,
+				FA79778B2275F9E700686CA3 /* AVPlayerTextureSource.swift in Sources */,
+				FAA2E5AB22774E520013F858 /* InvertColorShaders.metal in Sources */,
+				FA7977602275B9EC00686CA3 /* AppDelegate.swift in Sources */,
+				FA7977842275D52F00686CA3 /* SimpleRenderer.swift in Sources */,
+				FAA2E5B32278219A0013F858 /* DisplayRenderPass.swift in Sources */,
+				FAA2E5B9227838260013F858 /* DreamEffectShaders.metal in Sources */,
+				FAA2E5A922774A2D0013F858 /* InvertColorRenderPass.swift in Sources */,
+				FAA2E5AF2277576E0013F858 /* GaussianBlurShaders.metal in Sources */,
+				FAA2E5AD227757620013F858 /* GaussianBlurRenderPass.swift in Sources */,
+				FA79777B2275BBB900686CA3 /* VideoPlayerView.swift in Sources */,
+				FAA2E5BE227854AE0013F858 /* GlitchEffectShaders.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA7977632275B9ED00686CA3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA7977642275B9ED00686CA3 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		FAA2E5A62277431C0013F858 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA2E5A52277431C0013F858 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA7977682275B9ED00686CA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA7977692275B9ED00686CA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FA79776B2275B9ED00686CA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MetalPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyandev.MetalPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FA79776C2275B9ED00686CA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MetalPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyandev.MetalPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA7977572275B9EC00686CA3 /* Build configuration list for PBXProject "MetalPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7977682275B9ED00686CA3 /* Debug */,
+				FA7977692275B9ED00686CA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA79776A2275B9ED00686CA3 /* Build configuration list for PBXNativeTarget "MetalPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA79776B2275B9ED00686CA3 /* Debug */,
+				FA79776C2275B9ED00686CA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA7977542275B9EC00686CA3 /* Project object */;
+}

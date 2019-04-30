@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="f4r-XC-Dnv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="9Cv-7U-Gdv">
+            <objects>
+                <windowController id="f4r-XC-Dnv" customClass="PlayerWindowController" customModule="MetalPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Ihs-hm-WYX">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="f4r-XC-Dnv" id="eS2-CD-K57"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="ERv-29-1j6" kind="relationship" relationship="window.shadowedContentViewController" id="yLz-hk-hMZ"/>
+                    </connections>
+                </windowController>
+                <customObject id="gAa-gY-8Kg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="21"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="qNi-7D-7Zp">
+            <objects>
+                <viewController id="ERv-29-1j6" customClass="PlayerViewController" customModule="MetalPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="J5w-f3-eZa">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJ7-Ak-uXL">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <subviews>
+                                    <customView id="zsA-A7-egw">
+                                        <rect key="frame" x="0.0" y="0.0" width="302" height="270"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="weF-Vz-MUM" customClass="VideoPlayerView" customModule="MetalPlayer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="302" height="270"/>
+                                            </customView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="weF-Vz-MUM" secondAttribute="bottom" id="8Ui-g7-SDN"/>
+                                            <constraint firstItem="weF-Vz-MUM" firstAttribute="top" secondItem="zsA-A7-egw" secondAttribute="top" id="BIu-Zl-plF"/>
+                                            <constraint firstItem="weF-Vz-MUM" firstAttribute="leading" secondItem="zsA-A7-egw" secondAttribute="leading" id="SGa-di-JXA"/>
+                                            <constraint firstAttribute="trailing" secondItem="weF-Vz-MUM" secondAttribute="trailing" id="bUj-df-5B1"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView id="eNW-7G-jMX">
+                                        <rect key="frame" x="303" y="0.0" width="177" height="270"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="pb8-9j-Ggp">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="270"/>
+                                                <connections>
+                                                    <segue destination="04W-Vq-BbA" kind="embed" id="p06-d5-fG4"/>
+                                                </connections>
+                                            </containerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pb8-9j-Ggp" firstAttribute="top" secondItem="eNW-7G-jMX" secondAttribute="top" id="FTo-IC-jBl"/>
+                                            <constraint firstAttribute="bottom" secondItem="pb8-9j-Ggp" secondAttribute="bottom" id="NhA-cz-nMy"/>
+                                            <constraint firstAttribute="trailing" secondItem="pb8-9j-Ggp" secondAttribute="trailing" id="WAv-LR-Ad8"/>
+                                            <constraint firstItem="pb8-9j-Ggp" firstAttribute="leading" secondItem="eNW-7G-jMX" secondAttribute="leading" id="pp7-hF-ExX"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                                <connections>
+                                    <outlet property="delegate" destination="ERv-29-1j6" id="egQ-Ph-BvS"/>
+                                </connections>
+                            </splitView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nJ7-Ak-uXL" secondAttribute="trailing" id="0tE-rf-cBr"/>
+                            <constraint firstItem="nJ7-Ak-uXL" firstAttribute="top" secondItem="J5w-f3-eZa" secondAttribute="top" id="1zW-oY-wfG"/>
+                            <constraint firstItem="nJ7-Ak-uXL" firstAttribute="leading" secondItem="J5w-f3-eZa" secondAttribute="leading" id="KST-iU-Iq7"/>
+                            <constraint firstAttribute="bottom" secondItem="nJ7-Ak-uXL" secondAttribute="bottom" id="a3r-ys-wox"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="weF-Vz-MUM" id="Ycg-dv-0xW"/>
+                    </connections>
+                </viewController>
+                <customObject id="w9f-sT-sSM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="-4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kw5-i1-og8">
+            <objects>
+                <viewController id="04W-Vq-BbA" sceneMemberID="viewController">
+                    <view key="view" id="laW-C5-9eK">
+                        <rect key="frame" x="0.0" y="0.0" width="226" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="NMC-32-7MN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="415"/>
+        </scene>
+    </scenes>
+</document>
