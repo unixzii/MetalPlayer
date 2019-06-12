@@ -32,7 +32,7 @@ class DreamEffectRenderPass: BasicRenderPass {
             textureDescriptor.width = width
             textureDescriptor.height = height
             textureDescriptor.pixelFormat = input.pixelFormat
-            textureDescriptor.storageMode = .managed
+            textureDescriptor.storageMode = .private
             textureDescriptor.usage = [.shaderRead, .shaderWrite, .renderTarget]
             guard let texture = context.device.makeTexture(descriptor: textureDescriptor) else {
                 return input
