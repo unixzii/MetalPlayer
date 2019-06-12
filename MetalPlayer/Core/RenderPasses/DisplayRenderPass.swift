@@ -69,7 +69,6 @@ class DisplayRenderPass: BasicRenderPass {
         
         if let drawable = self.renderTarget.drawable {
             commandBuffer.present(drawable)
-            return (drawable as? CAMetalDrawable)?.texture
         }
         
         return nil

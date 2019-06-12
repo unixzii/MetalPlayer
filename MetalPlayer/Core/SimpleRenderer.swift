@@ -83,13 +83,17 @@ class SimpleRenderer: Renderer, TextureSink {
         let renderPassContext = SimpleRenderPassContext(
             device: self.renderTarget!.mtlDevice!, commandBuffer: buffer)
         self.renderPasses.forEach { renderPass in
+            let displayRenderPass: Bool
             if renderPass is DisplayRenderPass {
                 (renderPass as! DisplayRenderPass).renderTarget = self.renderTarget
+                displayRenderPass = true
+            } else {
+                displayRenderPass = false
             }
             
             if let nextTexture = renderPass.process(input: texture, context: renderPassContext) {
                 texture = nextTexture
-            } else {
+            } else if !displayRenderPass {
                 Logger.shared.error(
                     "Errors occurred in render pass: \(renderPass)",
                     category: .simpleRenderer)
